@@ -51,7 +51,7 @@
       scrollbar-width: none;      
       gap: var(--spacing-400, 2rem);
       align-items: start;
-      @media (768px <= width <= 1440px) {
+      @media (768px <= width < 1440px) {
         width: min(40.44rem, 90svw);
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
@@ -59,6 +59,13 @@
           "o2 o3"
           "o4 o4"
           "o5 o5";
+      }
+      @media (width >= 1440px) {
+        width: min(69.63rem, 90svw);
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        grid-template-areas: 
+          "o1 o1 o2 o5"
+          "o3 o4 o4 o5";
       }
     }
 
