@@ -81,11 +81,11 @@
       height: 4.5625rem; /* bottom padding */
     }
 
-    .card.card-order-1 {grid-area: o1;}
-    .card.card-order-2 {grid-area: o2;}
-    .card.card-order-3 {grid-area: o3;}
-    .card.card-order-4 {grid-area: o4;}
-    .card.card-order-5 {grid-area: o5;}
+    .card:nth-child(1) { grid-area: o1; }
+    .card:nth-child(2) { grid-area: o2; }
+    .card:nth-child(3) { grid-area: o3; }
+    .card:nth-child(4) { grid-area: o4; }
+    .card:nth-child(5) { grid-area: o5; }
 
     .card {
       display: flex;
@@ -238,7 +238,7 @@
 
   <main>
 
-    <div class="card purple card-order-1">
+    <div class="card purple">
       <div class="profile">
         <img src="./images/image-daniel.jpg" alt="daniel">
         <div class="title-wrapper">
@@ -259,7 +259,7 @@
       </p>
     </div>
 
-    <div class="card grey card-order-2">
+    <div class="card grey">
       <div class="profile">
         <img src="./images/image-jonathan.jpg" alt="jonathan">
         <div class="title-wrapper">
@@ -274,7 +274,7 @@
       </p>
     </div>
 
-     <div class="card white card-order-3">
+     <div class="card white">
       <div class="profile">
         <img src="./images/image-jeanette.jpg" alt="jeanette">
         <div class="title-wrapper">
@@ -289,7 +289,7 @@
       </p>
     </div>
 
-     <div class="card dark-blue card-order-4">
+     <div class="card dark-blue">
       <div class="profile">
         <img src="./images/image-patrick.jpg" alt="patrick">
         <div class="title-wrapper">
@@ -309,7 +309,7 @@
       </p>
     </div>
 
-    <div class="card white card-order-5">
+    <div class="card white">
       <div class="profile">
         <img src="./images/image-kira.jpg" alt="kira">
         <div class="title-wrapper">
