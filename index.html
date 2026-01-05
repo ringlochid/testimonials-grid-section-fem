@@ -51,6 +51,15 @@
       scrollbar-width: none;      
       gap: var(--spacing-400, 2rem);
       align-items: start;
+      @media (768px <= width <= 1440px) {
+        width: min(40.44rem, 90svw);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+          "o1 o1"
+          "o2 o3"
+          "o4 o4"
+          "o5 o5";
+      }
     }
 
     main::before {
@@ -65,6 +74,12 @@
       height: 4.5625rem; /* bottom padding */
     }
 
+    .card.card-order-1 {grid-area: o1;}
+    .card.card-order-2 {grid-area: o2;}
+    .card.card-order-3 {grid-area: o3;}
+    .card.card-order-4 {grid-area: o4;}
+    .card.card-order-5 {grid-area: o5;}
+
     .card {
       display: flex;
       padding: var(--spacing-400, 2rem);
@@ -74,7 +89,7 @@
       gap: var(--spacing-200, 1rem);
       align-self: stretch;
       border-radius: 0.5rem;
-      box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+      box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25); 
     }
 
     .card.purple {
@@ -216,7 +231,7 @@
 
   <main>
 
-    <div class="card purple">
+    <div class="card purple card-order-1">
       <div class="profile">
         <img src="./images/image-daniel.jpg" alt="daniel">
         <div class="title-wrapper">
@@ -237,7 +252,7 @@
       </p>
     </div>
 
-    <div class="card grey">
+    <div class="card grey card-order-2">
       <div class="profile">
         <img src="./images/image-jonathan.jpg" alt="jonathan">
         <div class="title-wrapper">
@@ -252,7 +267,7 @@
       </p>
     </div>
 
-     <div class="card white">
+     <div class="card white card-order-3">
       <div class="profile">
         <img src="./images/image-jeanette.jpg" alt="jeanette">
         <div class="title-wrapper">
@@ -267,7 +282,7 @@
       </p>
     </div>
 
-     <div class="card dark-blue">
+     <div class="card dark-blue card-order-4">
       <div class="profile">
         <img src="./images/image-patrick.jpg" alt="patrick">
         <div class="title-wrapper">
@@ -287,7 +302,7 @@
       </p>
     </div>
 
-    <div class="card white">
+    <div class="card white card-order-5">
       <div class="profile">
         <img src="./images/image-kira.jpg" alt="kira">
         <div class="title-wrapper">
